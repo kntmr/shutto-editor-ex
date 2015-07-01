@@ -1,0 +1,26 @@
+body {
+  width: 120px;
+}
+
+.popup-item {
+  padding: 3px;
+  width: 100%;
+  color: #47b;
+  font-size: 14px;
+  font: menu;
+  text-align: center;
+  cursor: pointer;
+}
+
+.popup-item:hover {
+  padding: 2px;
+  border: solid 1px #bcd;
+  border-radius: 3px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #fff),
+    color-stop(0.4, hsl(215, 67%, 97%)),
+    color-stop(0.41, hsl(213, 48%, 95%)));
+}

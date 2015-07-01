@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "shutto-editor-ex",
+  "version": "0.1",
+  "description": "For shutto users, expand CSS/JS editing area.",
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "html/popup.html"
+  },
+  "permissions": ["tabs"],
+  "options_page": "html/options.html",
+  "background": {
+    "scripts": ["js/jquery.min.js", "js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://shutto.com/edit/*", "http://sb.shutto.com/edit/*"],
+      "js": ["js/jquery.min.js", "js/content_script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
